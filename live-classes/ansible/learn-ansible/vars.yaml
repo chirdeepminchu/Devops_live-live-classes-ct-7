@@ -25,4 +25,8 @@
 
     - name: Task variable
       ansible.builtin.debug:
-        msg: "{{ URL_CUSTOM }}"            
+        msg: "{{ URL_CUSTOM }}"       
+        
+             
+
+#ansible-playbook vars.yaml -e "URL_CUSTOM='Tom is driving'"        
