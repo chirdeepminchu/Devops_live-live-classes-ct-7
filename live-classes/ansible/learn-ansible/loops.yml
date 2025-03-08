@@ -1,0 +1,42 @@
+#iteration of tasks until the condition fails
+
+#print("i Love my country") (5times)
+
+# for (i=1; i<=5; i++) {
+#   system.println("i");
+# }
+
+# Dry run:
+
+# Iteration 1:
+# i=1; 1<=5 ? True ; 
+#  1
+
+# Iteration 2: 
+# i=i(1)+1=2;
+# i=2; 2<=5 ? True; 2
+
+# 5<=5 ?
+
+# i=5+1=6, 6<=5? False
+
+#loop -- keyword
+
+- name: Loop Demo
+  hosts: localhost
+  tasks:
+    - name: Print Fruits
+      ansible.builtin.debug:
+        msg: "Fruit Name - {{ item }}"
+      loop:
+        - apple
+        - banana
+        - orange
+
+    - name: Print Fruits with Quantity
+      ansible.builtin.debug:
+        msg: "Fruit Name - {{ item.name }}, Quantity - {{ item.quantity }}"
+      loop:
+        - { name: apple , quantity: 10 }
+        - { name: banana , quantity: 20 }
+        - { name: orange , quantity: 30 }   
