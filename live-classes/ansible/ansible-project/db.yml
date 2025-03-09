@@ -1,7 +1,7 @@
 - name: Mysql Setup
   hosts: mysql
   become: yes
-  var_files:
+  vars_files:
     - vault.yml
   tasks:
     - name: Install MySQL Server
