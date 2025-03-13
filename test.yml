@@ -1,0 +1,10 @@
+---
+ - name: print sample text
+   host: localhost
+- tasks:
+   - name: Print statement
+     ansible.builtin.debug:
+       msg: My name is Chirdeep
+   - name: Print statement
+     ansible.builtin.debug:
+       msg: Devops learning    

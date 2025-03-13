@@ -7,7 +7,7 @@
   tasks:
     - name: Vegetables
       ansible.builtin.debug:
-        msg: vegetables
+       msg: vegetables
       when: type == "vegetables"
 
     - name: Fruits
