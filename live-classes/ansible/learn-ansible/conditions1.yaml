@@ -3,11 +3,11 @@
   tasks:
     - name: Car
       ansible.bultin.debug:
-        msg: "Car"
+        msg: Car
       when type == "Car"
 
     - name: Bike
       ansible.builtin.debug:
-        msg: "Bike" 
+        msg: Bike
       when type == "Bike"   
           
