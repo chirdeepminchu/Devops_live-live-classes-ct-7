@@ -1,0 +1,13 @@
+- name: Demo on conditions
+  hosts: localhost
+  tasks:
+    - name: Car
+      ansible.bultin.debug:
+        msg: "Car"
+      when type == "Car"
+
+    - name: Bike
+      ansible.builtin.debug:
+        msg: "Bike" 
+      when type == "Bike"   
+          
