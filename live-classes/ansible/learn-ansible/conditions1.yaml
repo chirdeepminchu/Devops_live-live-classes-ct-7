@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
     - name: Car
-      ansible.bultin.debug:
+      ansible.builtin.debug:
        msg: Car
       when: type == "Car"
 
