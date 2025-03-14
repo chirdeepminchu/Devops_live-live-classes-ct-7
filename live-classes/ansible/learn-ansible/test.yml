@@ -8,3 +8,4 @@
    - name: Print statement
      ansible.builtin.debug:
        msg: Devops learning    
+   
