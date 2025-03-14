@@ -16,3 +16,7 @@
     - name: Task variable
       ansible.builtin.debug:
         msg: "{{ URL_PLAY }}"
+
+    - name: Task variable
+      ansible.builtin.debug:
+        msg: "{{ URL_COSTUM }}"    
