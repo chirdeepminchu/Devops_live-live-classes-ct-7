@@ -31,6 +31,8 @@ output "z_x" {
     value = var.z_map["x"]
 } 
 
+variable "env" {}
+variable "tag" {}
 
 
 
@@ -39,3 +41,8 @@ output "z_x" {
 
 #int, list , map , bool , string
 #var.variablename -- referencing a variable
+
+
+# 1. var.tf
+# 2. *.tfvars
+# 3. *.auto.tfvars
