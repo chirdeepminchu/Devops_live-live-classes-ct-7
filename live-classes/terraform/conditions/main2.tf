@@ -10,3 +10,5 @@ resource "aws_instance" "test" {
 variable "instance_type" {}
 
 #You will take the input from user whether create and instance or not ?
+
+#Give the liberty to the user to select the ami based on their region
