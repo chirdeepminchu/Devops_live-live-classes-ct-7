@@ -1,0 +1,32 @@
+ec2 ---> aws_instance
+s3 --> aws_s3_bucket
+
+resource "resourcename as defined by terraform" "local resource identification name" {
+    arguments .....
+}
+
+resource "resourcename as defined by terraform" "xyz" {
+    arguments .....
+}
+
+
+provider "providername as defined by TF" {
+
+}
+
+provider "aws" {
+    region = "us-east-1"
+}
+
+resource "aws_s3_bucket" "default" {
+
+}
+
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-test-bucket"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
