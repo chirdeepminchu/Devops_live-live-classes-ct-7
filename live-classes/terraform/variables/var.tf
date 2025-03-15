@@ -32,7 +32,12 @@ output "z_x" {
 } 
 
 variable "env" {}
-variable "tag" {}
+#variable "tag" {}
+
+output "env-name" {
+    value = "Environment Name - ${var.env}"
+}
+
 
 
 
