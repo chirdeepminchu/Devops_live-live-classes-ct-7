@@ -8,3 +8,5 @@ resource "aws_instance" "test" {
 }
 
 variable "instance_type" {}
+
+#You will take the input from user whether create and instance or not ?
