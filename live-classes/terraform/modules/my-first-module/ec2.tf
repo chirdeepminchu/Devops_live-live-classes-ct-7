@@ -4,8 +4,10 @@ resource "aws_instance" "test" {
 
   tags = {
     Name = var.Name
+    terraform = var.terraform
   }
 }
 
 variable "Name" {}
 variable "instance_type" {}
+varibale "terraform" {}
