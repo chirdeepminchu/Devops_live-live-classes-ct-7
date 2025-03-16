@@ -1,0 +1,1 @@
+Create multiple EC2 instances in different environments (dev, prod).
