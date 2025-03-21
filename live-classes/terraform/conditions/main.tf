@@ -1,6 +1,18 @@
 # ? and :
 # condition ? true_value : false_value
 
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.91.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"
+}
 
 variable "environment" {
   default = "dev"
