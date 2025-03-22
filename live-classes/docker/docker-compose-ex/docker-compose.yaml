@@ -4,7 +4,7 @@ services:
     image: httpd
     ports:
     - "5000:5000"
-  nginxapp:
+  nginxapp21:
     image: app:v1
     ports:
     - "8086:80"
