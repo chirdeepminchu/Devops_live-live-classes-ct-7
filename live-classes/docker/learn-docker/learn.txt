@@ -45,9 +45,67 @@ container. These commands run only when there is no argument
 specified while running the container. (app.jar  --> java app.jar // python3 app.py)
 
 
+FROM ubuntu
+CMD ["echo" , "Hello World!"]
+
+# docker run abd72ae66e30 echo "Hello World from CMD"
+
 
 
 ENTRYPOINT
 The
 ENTRYPOINT keyword is used strictly to run commands the
 moment the container initializes along with multiple arguments -- java app.jar --xms 20Gb
+
+FROM ubuntu
+ENTRYPOINT ["echo" , "Hello from ENTRYPOINT:"]
+
+ubuntu@ip-172-31-18-222:~$ docker run entry:1 "Some additional content"
+Hello from ENTRYPOINT: Some additional content
+
+===================================================================
+
+FROM ubuntu
+ENTRYPOINT ["echo"]
+CMD ["You can control this via runtime too"]
+
+
+===================================
+
+1. Dockerfile
+
+2. docker build . --tag   ---> This build or creates ur Docker Image
+
+3. docker run imagename ----> This will give ur image a life and start running the app u built as container
+
+========================
+
+# run 100 containers
+docker run
+
+Docker Compose Files --> Running multi Stack Docker conatiners
+These are simple YAML files
+
+docker run -it -d --name nginx4 -p 8085:80 app:v1 
+
+version: '3'
+services:  -- stands for holding the entire stack of  the containers list
+  container 1:
+    image: app:v1
+    ports:
+    - "8085:80"
+    name: nginx4
+    command : 
+  container 2:
+    image: image:v2
+    ports:
+    - "8084:80"
+    env:
+    - email: akas@gmail.command
+    - config: test
+    volumes:
+    - db_data:/app
+    restart:  always
+
+docker-compose.yaml  
+Only One command to start,stop, restart all containers (docker-compose up/down -d)
