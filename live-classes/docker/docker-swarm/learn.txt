@@ -1,0 +1,7 @@
+docker swarm init --advertise-addr serveraddress [ This will be my master and all swarms must connect to it]
+
+docker swarm join --token SWMTKN-1-631slww4t4i7zr61t986xdazoa00sv13kj01aff0v4i2hkw4j0-3uxwp8bq3a49vtpbt1y01kdc3 54.197.196.131:2377
+
+docker service create --name <name-of-service> --replicas <number-of-replicas> --publish <port-mapping> <image-name>
+
+docker service create --name myfirstswarm-app --replicas 3 --publish 8001:80 nginx
