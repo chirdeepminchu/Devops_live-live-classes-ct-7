@@ -109,3 +109,16 @@ services:  -- stands for holding the entire stack of  the containers list
 
 docker-compose.yaml  
 Only One command to start,stop, restart all containers (docker-compose up/down -d)
+
+==========================
+
+FROM ubuntu:24.04  -- alpine parent images
+
+RUN apt-get update && apt-get install nginx -y
+
+Multistage ----
+
+2 layers to build an image -
+ 1 st layer will have all the major  components that is required to build my application
+ 2 nd layer , we will only take the necessary application file from the first layer to run the application
+
